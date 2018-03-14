@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next pisces use-motion" lang="zh-Hans">
+<html class="theme-next mist use-motion" lang="zh-Hans">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -123,18 +123,18 @@
 
 
 
-<meta name="description" content="Tomcat8 启动异常问题: tomcat7/8 启动非常慢 问题原因:SHA1PRNG算法是基于SHA-1算法实现且保密性较强的伪随机数生成器。 在SHA1PRNG中，有一个种子产生器，它根据配置执行各种操作。 1）如果Java.security.egd属性或securerandom.source属性指定的是”file:/dev/random”或”file:/dev/urandom”，那么JV">
+<meta name="description" content="Tomcat8 启动异常">
 <meta name="keywords" content="test">
 <meta property="og:type" content="article">
 <meta property="og:title" content="测试文章">
 <meta property="og:url" content="https://aarongo.github.io/blog/测试文章.html">
 <meta property="og:site_name" content="EdwardLiuBlog">
-<meta property="og:description" content="Tomcat8 启动异常问题: tomcat7/8 启动非常慢 问题原因:SHA1PRNG算法是基于SHA-1算法实现且保密性较强的伪随机数生成器。 在SHA1PRNG中，有一个种子产生器，它根据配置执行各种操作。 1）如果Java.security.egd属性或securerandom.source属性指定的是”file:/dev/random”或”file:/dev/urandom”，那么JV">
+<meta property="og:description" content="Tomcat8 启动异常">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-03-14T03:38:01.000Z">
+<meta property="og:updated_time" content="2018-03-14T04:14:50.600Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="测试文章">
-<meta name="twitter:description" content="Tomcat8 启动异常问题: tomcat7/8 启动非常慢 问题原因:SHA1PRNG算法是基于SHA-1算法实现且保密性较强的伪随机数生成器。 在SHA1PRNG中，有一个种子产生器，它根据配置执行各种操作。 1）如果Java.security.egd属性或securerandom.source属性指定的是”file:/dev/random”或”file:/dev/urandom”，那么JV">
+<meta name="twitter:description" content="Tomcat8 启动异常">
 
 
 
@@ -142,7 +142,7 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
-    scheme: 'Pisces',
+    scheme: 'Mist',
     version: '5.1.4',
     sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
     fancybox: true,
@@ -364,7 +364,8 @@
       
 
       
-        <h1 id="Tomcat8-启动异常"><a href="#Tomcat8-启动异常" class="headerlink" title="Tomcat8 启动异常"></a>Tomcat8 启动异常</h1><h2 id="问题"><a href="#问题" class="headerlink" title="问题:"></a><em><strong>问题:</strong></em></h2><p> tomcat7/8 启动非常慢</p>
+        <h1 id="Tomcat8-启动异常"><a href="#Tomcat8-启动异常" class="headerlink" title="Tomcat8 启动异常"></a>Tomcat8 启动异常</h1><a id="more"></a>
+<h2 id="问题"><a href="#问题" class="headerlink" title="问题:"></a><em><strong>问题:</strong></em></h2><p> tomcat7/8 启动非常慢</p>
 <h2 id="问题原因"><a href="#问题原因" class="headerlink" title="问题原因:"></a><em><strong>问题原因:</strong></em></h2><p><strong>SHA1PRNG算法是基于SHA-1算法实现且保密性较强的伪随机数生成器</strong>。</p>
 <p><strong>在SHA1PRNG中，有一个种子产生器，它根据配置执行各种操作。</strong></p>
 <p>1）如果Java.security.egd属性或securerandom.source属性指定的是”file:/dev/random”或”file:/dev/urandom”，那么JVM会使用本地种子产生器NativeSeedGenerator，它会调用super()方法，即调用SeedGenerator.URLSeedGenerator(/dev/random)方法进行初始化。</p>
@@ -625,7 +626,7 @@
 
 
 
-  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.4</div>
 
 
 
@@ -724,13 +725,6 @@
 
   
   
-
-
-  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
-
-  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
-
-
 
   
   <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
