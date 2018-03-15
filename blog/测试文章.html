@@ -123,20 +123,20 @@
 
 
 
-<meta name="description" content="简介  1使用 Ansible 自定义模块功能编写日常使用功能.">
+<meta name="description" content="使用 Ansible 自定义模块功能编写日常使用功能.">
 <meta name="keywords" content="Ansible">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Ansible模块编写">
 <meta property="og:url" content="https://aarongo.github.io/blog/测试文章.html">
 <meta property="og:site_name" content="EdwardLiuBlog">
-<meta property="og:description" content="简介  1使用 Ansible 自定义模块功能编写日常使用功能.">
+<meta property="og:description" content="使用 Ansible 自定义模块功能编写日常使用功能.">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://aarongo.github.io/blog/media/15209377890283/15209394493122.jpg">
-<meta property="og:updated_time" content="2018-03-15T04:02:48.366Z">
+<meta property="og:image" content="http://p5m69ggo7.bkt.clouddn.com/ansible_custom-moudle.jpg">
+<meta property="og:updated_time" content="2018-03-15T04:10:19.586Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Ansible模块编写">
-<meta name="twitter:description" content="简介  1使用 Ansible 自定义模块功能编写日常使用功能.">
-<meta name="twitter:image" content="https://aarongo.github.io/blog/media/15209377890283/15209394493122.jpg">
+<meta name="twitter:description" content="使用 Ansible 自定义模块功能编写日常使用功能.">
+<meta name="twitter:image" content="http://p5m69ggo7.bkt.clouddn.com/ansible_custom-moudle.jpg">
 
 
 
@@ -422,12 +422,9 @@
       
 
       
-        <ul>
-<li>简介</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">使用 Ansible 自定义模块功能编写日常使用功能.</span><br></pre></td></tr></table></figure>
+        <p>使用 Ansible 自定义模块功能编写日常使用功能.</p>
 <a id="more"></a>
-<h1 id="Ansible-远程服务器连接-Internet-测试"><a href="#Ansible-远程服务器连接-Internet-测试" class="headerlink" title="Ansible 远程服务器连接 Internet 测试"></a>Ansible 远程服务器连接 Internet 测试</h1><p>Email 连接: <a href="mailto:&#108;&#x6f;&#110;&#110;&#121;&#108;&#x69;&#117;&#x40;&#x31;&#x32;&#54;&#x2e;&#99;&#x6f;&#x6d;" target="_blank" rel="noopener">&#108;&#x6f;&#110;&#110;&#121;&#108;&#x69;&#117;&#x40;&#x31;&#x32;&#54;&#x2e;&#99;&#x6f;&#x6d;</a></p>
+<h1 id="Ansible-远程服务器连接-Internet-测试"><a href="#Ansible-远程服务器连接-Internet-测试" class="headerlink" title="Ansible 远程服务器连接 Internet 测试"></a>Ansible 远程服务器连接 Internet 测试</h1><p>Email 连接: <a href="mailto:&#108;&#x6f;&#x6e;&#110;&#121;&#108;&#105;&#x75;&#64;&#49;&#50;&#x36;&#x2e;&#99;&#x6f;&#x6d;" target="_blank" rel="noopener">&#108;&#x6f;&#x6e;&#110;&#121;&#108;&#105;&#x75;&#64;&#49;&#50;&#x36;&#x2e;&#99;&#x6f;&#x6d;</a></p>
 <hr>
 <p><strong>需求</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">在使用Ansible过程中不可避免需要了解远端服务器是否能够联通外网,以便进行在线安装软件或者其他.对于运维人员来说普遍的办法有</span><br><span class="line"></span><br><span class="line">1. 登录到每台服务器进行 ping 测试(基本上这个时候 `www.baidu.com` 派上用场了)</span><br><span class="line">2. 使用Ansible直接对以定义好的主机进行远端执行shell命令</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">以上两种第一种有可能是普遍的方式,第二种有一部分人在使用但也不否定有其他更好的办法</span><br></pre></td></tr></table></figure>
@@ -448,7 +445,7 @@
 <p><strong>使用介绍</strong></p>
 <p>  ansible–Ad-Hoc Commands(使用命令行)</p>
   <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">ansible pipeline -m checknetwork -a <span class="string">"url=www.baidu.com"</span></span><br><span class="line">pipeline: hosts 文件中组名称</span><br><span class="line">checknetwork: 自定义模块名称</span><br><span class="line">url=www.baidu.com 测试外网连接的 URL</span><br></pre></td></tr></table></figure>
-<p>效果:<br><img src="media/15209377890283/15209394493122.jpg" alt=""></p>
+<p>效果:<br><img src="http://p5m69ggo7.bkt.clouddn.com/ansible_custom-moudle.jpg" alt=""></p>
 <p><strong>附ansible playbooks使用案例</strong></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line"><span class="comment"># 判断是否有外网</span></span><br><span class="line">- name: checkne internet connection</span><br><span class="line">  checknetwork: url=&#123;&#123; check_url &#125;&#125;</span><br><span class="line">  register: result</span><br><span class="line"></span><br><span class="line">- debug:</span><br><span class="line">    msg: <span class="string">"System &#123;&#123; inventory_hostname &#125;&#125; has Connection internet!!!"</span></span><br><span class="line">  when: result.stdotut == <span class="string">'Connection'</span></span><br></pre></td></tr></table></figure>
 
