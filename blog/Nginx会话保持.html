@@ -123,18 +123,18 @@
 
 
 
-<meta name="description" content="Nginx配置会话保持Sticky工作原理 ： 123456Sticky是nginx的一个模块，它是基于cookie的一种nginx的负载均衡解决方案，通过分发和识别cookie，来使同一个客户端的请求落在同一台服务器上，默认标识名为route1.客户端首次发起访问请求，nginx接收后，发现请求头没有cookie，则以轮询方式将请求分发给后端服务器。2.后端服务器处理完请求，将响应数据返回给ng">
+<meta name="description" content="在整个网络前端没有 F5的情况下,运维同事们该如何进行后端服务的集群化? 实现了集群化该如何实现集群内的服务进行会话保持? 接下来进行详细讲解">
 <meta name="keywords" content="Nginx">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Nginx会话保持">
 <meta property="og:url" content="https://aarongo.github.io/blog/Nginx会话保持.html">
 <meta property="og:site_name" content="EdwardLiuBlog">
-<meta property="og:description" content="Nginx配置会话保持Sticky工作原理 ： 123456Sticky是nginx的一个模块，它是基于cookie的一种nginx的负载均衡解决方案，通过分发和识别cookie，来使同一个客户端的请求落在同一台服务器上，默认标识名为route1.客户端首次发起访问请求，nginx接收后，发现请求头没有cookie，则以轮询方式将请求分发给后端服务器。2.后端服务器处理完请求，将响应数据返回给ng">
+<meta property="og:description" content="在整个网络前端没有 F5的情况下,运维同事们该如何进行后端服务的集群化? 实现了集群化该如何实现集群内的服务进行会话保持? 接下来进行详细讲解">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-03-15T10:36:50.298Z">
+<meta property="og:updated_time" content="2018-03-15T10:44:54.496Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Nginx会话保持">
-<meta name="twitter:description" content="Nginx配置会话保持Sticky工作原理 ： 123456Sticky是nginx的一个模块，它是基于cookie的一种nginx的负载均衡解决方案，通过分发和识别cookie，来使同一个客户端的请求落在同一台服务器上，默认标识名为route1.客户端首次发起访问请求，nginx接收后，发现请求头没有cookie，则以轮询方式将请求分发给后端服务器。2.后端服务器处理完请求，将响应数据返回给ng">
+<meta name="twitter:description" content="在整个网络前端没有 F5的情况下,运维同事们该如何进行后端服务的集群化? 实现了集群化该如何实现集群内的服务进行会话保持? 接下来进行详细讲解">
 
 
 
@@ -420,7 +420,9 @@
       
 
       
-        <h1 id="Nginx"><a href="#Nginx" class="headerlink" title="Nginx"></a>Nginx</h1><h2 id="配置会话保持"><a href="#配置会话保持" class="headerlink" title="配置会话保持"></a><em><strong>配置会话保持</strong></em></h2><p><em><strong>Sticky工作原理 ：</strong></em></p>
+        <p>在整个网络前端没有 F5的情况下,运维同事们该如何进行后端服务的集群化? 实现了集群化该如何实现集群内的服务进行会话保持? 接下来进行详细讲解</p>
+<a id="more"></a>
+<h1 id="Nginx"><a href="#Nginx" class="headerlink" title="Nginx"></a>Nginx</h1><h2 id="配置会话保持"><a href="#配置会话保持" class="headerlink" title="配置会话保持"></a><em><strong>配置会话保持</strong></em></h2><p><em><strong>Sticky工作原理 ：</strong></em></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Sticky是nginx的一个模块，它是基于cookie的一种nginx的负载均衡解决方案，通过分发和识别cookie，来使同一个客户端的请求落在同一台服务器上，默认标识名为route</span><br><span class="line">1.客户端首次发起访问请求，nginx接收后，发现请求头没有cookie，则以轮询方式将请求分发给后端服务器。</span><br><span class="line">2.后端服务器处理完请求，将响应数据返回给nginx。</span><br><span class="line">3.此时nginx生成带route的cookie，返回给客户端。route的值与后端服务器对应，可能是明文，也可能是md5、sha1等Hash值</span><br><span class="line">4.客户端接收请求，并保存带route的cookie。</span><br><span class="line">5.当客户端下一次发送请求时，会带上route，nginx根据接收到的cookie中的route值，转发给对应的后端服务器</span><br></pre></td></tr></table></figure>
 <h3 id="Sticky-模块使用"><a href="#Sticky-模块使用" class="headerlink" title="Sticky 模块使用:"></a><em><strong>Sticky 模块使用:</strong></em></h3><blockquote>
 <p>sticky [name=route] [domain=.foo.bar] [path=/] [expires=1h] [hash=index|md5|sha1] [no_fallback] [secure] [httponly];</p>
