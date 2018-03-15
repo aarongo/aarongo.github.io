@@ -112,7 +112,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Tomcat," />
 
 
 
@@ -123,17 +123,18 @@
 
 
 
-<meta name="description" content="不积跬步，无以至千里；不积小流，无以成江海。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="标签">
-<meta property="og:url" content="https://aarongo.github.io/tags/index.html">
+<meta name="description" content="Tomcat 日常使用过程中遇到问题及解决分享…">
+<meta name="keywords" content="Tomcat">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Tomcat配置分享">
+<meta property="og:url" content="https://aarongo.github.io/blog/Tomcat配置分享.html">
 <meta property="og:site_name" content="EdwardLiuBlog">
-<meta property="og:description" content="不积跬步，无以至千里；不积小流，无以成江海。">
+<meta property="og:description" content="Tomcat 日常使用过程中遇到问题及解决分享…">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-03-14T03:51:37.726Z">
+<meta property="og:updated_time" content="2018-03-15T08:31:02.398Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="标签">
-<meta name="twitter:description" content="不积跬步，无以至千里；不积小流，无以成江海。">
+<meta name="twitter:title" content="Tomcat配置分享">
+<meta name="twitter:description" content="Tomcat 日常使用过程中遇到问题及解决分享…">
 
 
 
@@ -163,13 +164,13 @@
 
 
 
-  <link rel="canonical" href="https://aarongo.github.io/tags/"/>
+  <link rel="canonical" href="https://aarongo.github.io/blog/Tomcat配置分享.html"/>
 
 
 
 
 
-  <title>标签 | EdwardLiuBlog</title>
+  <title>Tomcat配置分享 | EdwardLiuBlog</title>
   
 
 
@@ -318,40 +319,215 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://aarongo.github.io/blog/Tomcat配置分享.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="EdwardLiu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="EdwardLiuBlog">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-	<h1 class="post-title" itemprop="name headline">标签</h1>
-
-
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
-          <div class="tag-cloud">
-            <div class="tag-cloud-title">
-                目前共计 5 个标签
-            </div>
-            <div class="tag-cloud-tags">
-              <a href="/tags/Ansible/" style="font-size: 12px; color: #ccc">Ansible</a> <a href="/tags/Git/" style="font-size: 12px; color: #ccc">Git</a> <a href="/tags/Linux/" style="font-size: 30px; color: #111">Linux</a> <a href="/tags/Mongodb/" style="font-size: 12px; color: #ccc">Mongodb</a> <a href="/tags/Tomcat/" style="font-size: 12px; color: #ccc">Tomcat</a>
-            </div>
-          </div>
+          <h1 class="post-title" itemprop="name headline">Tomcat配置分享</h1>
         
-      </div>
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-15T16:25:51+08:00">
+                2018-03-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术分享/" itemprop="url" rel="index">
+                    <span itemprop="name">技术分享</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
       
+
+      
+        <p>Tomcat 日常使用过程中遇到问题及解决分享…</p>
+<a id="more"></a>
+<h1 id="Tomcat8-启动异常"><a href="#Tomcat8-启动异常" class="headerlink" title="Tomcat8 启动异常"></a>Tomcat8 启动异常</h1><h2 id="问题"><a href="#问题" class="headerlink" title="问题:"></a><em><strong>问题:</strong></em></h2><p> tomcat7/8 启动慢</p>
+<h2 id="问题原因"><a href="#问题原因" class="headerlink" title="问题原因:"></a><em><strong>问题原因:</strong></em></h2><p><strong><code>SHA1PRNG</code>算法是基于<code>SHA-1</code>算法实现且保密性较强的伪随机数生成器</strong>。</p>
+<p><strong>在<code>SHA1PRNG</code>中，有一个种子产生器，它根据配置执行各种操作。</strong></p>
+<p>1）如果<code>Java.security.egd</code>属性或<code>securerandom.source</code>属性指定的是<code>&quot;file:/dev/random&quot;</code>或<code>&quot;file:/dev/urandom&quot;</code>，那么JVM会使用本地种子产生器<code>NativeSeedGenerator</code>，它会调用<code>super()</code>方法，即调用<code>SeedGenerator.URLSeedGenerator(/dev/random)</code>方法进行初始化。</p>
+<p>2）如果<code>java.security.egd</code>属性或<code>securerandom.source</code>属性指定的是其它已存在的URL，那么会调用<code>SeedGenerator.URLSeedGenerator(url)</code>方法进行初始化。</p>
+<p>这就是为什么我们设置值为<code>&quot;file:///dev/urandom&quot;</code>或者值为<code>&quot;file:/./dev/random&quot;</code>都会起作用的原因。</p>
+<p>在这个实现中，产生器会评估熵池<code>（entropy pool）</code>中的噪声数量。随机数是从熵池中进行创建的。当读操作时，<code>/dev/random</code>设备会只返回熵池中噪声的随机字节。<code>/dev/random</code>非常适合那些需要非常高质量随机性的场景，比如一次性的支付或生成密钥的场景。</p>
+<p>当熵池为空时，来自<code>/dev/random</code>的读操作将被阻塞，直到熵池收集到足够的环境噪声数据。这么做的目的是成为一个密码安全的伪随机数发生器，熵池要有尽可能大的输出。对于生成高质量的加密密钥或者是需要长期保护的场景，一定要这么做。</p>
+<p>那么什么是环境噪声？</p>
+<p>随机数产生器会手机来自设备驱动器和其它源的环境噪声数据，并放入熵池中。产生器会评估熵池中的噪声数据的数量。当熵池为空时，这个噪声数据的收集是比较花时间的。这就意味着，Tomcat在生产环境中使用熵池时，会被阻塞较长的时间。</p>
+<h2 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法:"></a><strong>解决办法:</strong></h2><p>有两种解决办法：</p>
+<p>1）在<code>Tomcat</code>环境中解决</p>
+<p>  可以通过配置JRE使用非阻塞的<code>Entropy Source</code>。</p>
+<p>  在catalina.sh中CATALINA_OPTS加入这么一行：-Djava.security.egd=file:/dev/./urandom 即可。</p>
+<p>  加入后再启动Tomcat</p>
+<p>2）在JVM环境中解决</p>
+<p>  打开$JAVA_PATH/jre/lib/security/java.security这个文件，找到下面的内容：</p>
+<p>  securerandom.source=file:/dev/urandom </p>
+<p>  替换成</p>
+<p>  securerandom.source=file:/dev/./urandom</p>
+<hr>
+<h1 id="Tomcat-报错"><a href="#Tomcat-报错" class="headerlink" title="Tomcat 报错"></a>Tomcat 报错</h1><h2 id="错误信息"><a href="#错误信息" class="headerlink" title="错误信息"></a><strong>错误信息</strong></h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Error occurred during initialization of VM</span><br><span class="line">Too small initial heap <span class="keyword">for</span> new size specified</span><br></pre></td></tr></table></figure>
+<h3 id="错误详解"><a href="#错误详解" class="headerlink" title="错误详解"></a><strong>错误详解</strong></h3><ol>
+<li>错误信息有误导，不一定是堆内存大小设置不够</li>
+<li>Xms可以设置与-Xmx相同，但是最好别把三个都设置一样</li>
+</ol>
+<h3 id="报错原因"><a href="#报错原因" class="headerlink" title="报错原因"></a><strong>报错原因</strong></h3><p><strong>对xmn理解错误(Xmn不能大于等于Xmx)</strong></p>
+<blockquote>
+<p>-Xmn2g ：设置年轻代大小为2G。整个堆大小=年轻代大小 + 年老代大小 + 持久代大小 。持久代一般固定大小为64m，所以增大年轻代后，将会减小年老代大小。此值对系统性能影响较大，Sun官方推荐配置为整个堆的3/8。</p>
+</blockquote>
+<hr>
+<h1 id="Tomcat-报错相信信息排查"><a href="#Tomcat-报错相信信息排查" class="headerlink" title="Tomcat 报错相信信息排查"></a>Tomcat 报错相信信息排查</h1><h2 id="开启-Debug"><a href="#开启-Debug" class="headerlink" title="开启 Debug"></a>开启 Debug</h2><p><strong>开启 debug 模式进行深层次的排错</strong></p>
+<ol>
+<li>${tomcat_home}/lib/logging.properties # 创建该文件</li>
+<li><p>添加如下内容</p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">handlers = org.apache.juli.FileHandler, java.util.logging.ConsoleHandler</span><br><span class="line"><span class="comment">############################################################</span></span><br><span class="line"><span class="comment"># Handler specific properties.</span></span><br><span class="line"><span class="comment"># Describes specific configuration info for Handlers.</span></span><br><span class="line"><span class="comment">############################################################</span></span><br><span class="line"></span><br><span class="line">org.apache.juli.FileHandler.level = FINE</span><br><span class="line">org.apache.juli.FileHandler.directory = <span class="variable">$&#123;catalina.base&#125;</span>/logs</span><br><span class="line">org.apache.juli.FileHandler.prefix = error-debug.</span><br><span class="line"></span><br><span class="line">java.util.logging.ConsoleHandler.level = FINE</span><br><span class="line">java.util.logging.ConsoleHandler.formatter = java.util.logging.SimpleFormatter</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>查看${tomcat_home}/logs/error……</p>
+</li>
+</ol>
+<hr>
+<h1 id="Tomcat-黑白名单"><a href="#Tomcat-黑白名单" class="headerlink" title="Tomcat 黑白名单"></a>Tomcat 黑白名单</h1><h2 id="Tomcat-开启访问限制"><a href="#Tomcat-开启访问限制" class="headerlink" title="Tomcat 开启访问限制"></a>Tomcat 开启访问限制</h2><p><em><strong>Tomcat 配置文件更改</strong></em></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># cat $&#123;tomcat_home&#125;/config/server.conf</span></span><br><span class="line">&lt;Context crossContext=<span class="string">"true"</span> docBase=<span class="string">"/software/deploy_jenkins/jenkins"</span> reloadable=<span class="string">"true"</span> allowLinking=<span class="string">"true"</span> path=<span class="string">""</span>&gt;</span><br><span class="line">    &lt;Valve className=<span class="string">"org.apache.catalina.valves.RemoteAddrValve"</span> allow=<span class="string">"10.200.200.91"</span> deny=<span class="string">""</span>/&gt;</span><br><span class="line">&lt;/Context&gt;</span><br></pre></td></tr></table></figure>
+<h1 id="Tomcat-流量转换"><a href="#Tomcat-流量转换" class="headerlink" title="Tomcat 流量转换"></a>Tomcat 流量转换</h1><blockquote>
+<p>HTTP 转 HTTPS( 在证书存在负载均衡端)</p>
+</blockquote>
+<h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Make Tomcat Understand X-Forwarded-Proto by adding the following text in the Tomcat server.xml  &lt;Engine&gt; section. You only need to change this if you are using the shared Jelastic SSL certificate or if you are using a load balancer.</span><br><span class="line"></span><br><span class="line">&lt;Valve className=&quot;org.apache.catalina.valves.RemoteIpValve&quot;</span><br><span class="line">remoteIpHeader=&quot;x-forwarded-for&quot;</span><br><span class="line">protocolHeader=&quot;x-forwarded-proto&quot;</span><br><span class="line">protocolHeaderHttpsValue=&quot;https&quot; /&gt;</span><br></pre></td></tr></table></figure>
+<h1 id="Tomcat代理配置"><a href="#Tomcat代理配置" class="headerlink" title="Tomcat代理配置"></a>Tomcat代理配置</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># catalina.sh JAVA_OPT=添加如下</span></span><br><span class="line">-Dhttp.proxyHost=192.168.0.9 -Dhttp.proxyPort=37128</span><br></pre></td></tr></table></figure>
+
       
     </div>
     
     
     
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Tomcat/" rel="tag"># Tomcat</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/blog/Mongodb日志清理.html" rel="next" title="Mongodb日志清理">
+                <i class="fa fa-chevron-left"></i> Mongodb日志清理
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
   </div>
 
 
@@ -384,8 +560,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -459,6 +644,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Tomcat8-启动异常"><span class="nav-number">1.</span> <span class="nav-text">Tomcat8 启动异常</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#问题"><span class="nav-number">1.1.</span> <span class="nav-text">问题:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#问题原因"><span class="nav-number">1.2.</span> <span class="nav-text">问题原因:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解决办法"><span class="nav-number">1.3.</span> <span class="nav-text">解决办法:</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Tomcat-报错"><span class="nav-number">2.</span> <span class="nav-text">Tomcat 报错</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#错误信息"><span class="nav-number">2.1.</span> <span class="nav-text">错误信息</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#错误详解"><span class="nav-number">2.1.1.</span> <span class="nav-text">错误详解</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#报错原因"><span class="nav-number">2.1.2.</span> <span class="nav-text">报错原因</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Tomcat-报错相信信息排查"><span class="nav-number">3.</span> <span class="nav-text">Tomcat 报错相信信息排查</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#开启-Debug"><span class="nav-number">3.1.</span> <span class="nav-text">开启 Debug</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Tomcat-黑白名单"><span class="nav-number">4.</span> <span class="nav-text">Tomcat 黑白名单</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Tomcat-开启访问限制"><span class="nav-number">4.1.</span> <span class="nav-text">Tomcat 开启访问限制</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Tomcat-流量转换"><span class="nav-number">5.</span> <span class="nav-text">Tomcat 流量转换</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#解决方案"><span class="nav-number">5.1.</span> <span class="nav-text">解决方案</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Tomcat代理配置"><span class="nav-number">6.</span> <span class="nav-text">Tomcat代理配置</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
