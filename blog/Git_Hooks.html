@@ -132,7 +132,7 @@
 <meta property="og:description" content="使用 Git Hooks 功能, 进行 Linux 配置文件管理">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://p5m69ggo7.bkt.clouddn.com/config_setup.png">
-<meta property="og:updated_time" content="2018-03-15T04:39:04.000Z">
+<meta property="og:updated_time" content="2018-03-15T05:07:00.181Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Git 钩子">
 <meta name="twitter:description" content="使用 Git Hooks 功能, 进行 Linux 配置文件管理">
@@ -425,18 +425,9 @@
         <p>使用 Git Hooks 功能, 进行 Linux 配置文件管理</p>
 <a id="more"></a>
 <h1 id="git-hooks-使用"><a href="#git-hooks-使用" class="headerlink" title="git hooks 使用"></a>git hooks 使用</h1><h2 id="配置管理示意图"><a href="#配置管理示意图" class="headerlink" title="配置管理示意图"></a>配置管理示意图</h2><p><img src="http://p5m69ggo7.bkt.clouddn.com/config_setup.png" alt="配置文件管理示意图"></p>
-<h2 id="git-hooks-使用说明"><a href="#git-hooks-使用说明" class="headerlink" title="git hooks 使用说明"></a>git hooks 使用说明</h2><ul>
-<li>客户端 hooks</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">1. pre-commit 钩子在键入提交信息前运行。</span><br><span class="line">2. prepare-commit-msg 钩子在启动提交信息编辑器之前，默认信息被创建之后运行。</span><br><span class="line">3. post-commit 钩子在整个提交过程完成后运行。</span><br><span class="line">4. applypatch-msg 你可以用该脚本来确保提交信息符合格式，或直接用脚本修正格式错误。</span><br><span class="line">5. pre-applypatch 在 git am 运行期间被调用</span><br><span class="line">6. post-applypatch 运行于提交产生之后，是在 git am 运行期间最后被调用的钩子。</span><br><span class="line">7. pre-rebase 钩子运行于变基之前，以非零值退出可以中止变基的过程。</span><br><span class="line">8. post-rewrite 钩子被那些会替换提交记录的命令调用。</span><br><span class="line">9. post-checkout 在 git checkout 成功运行后调用。</span><br><span class="line">10. post-merge 在 git merge 成功运行后调用。</span><br><span class="line">11. pre-push 在 git push 运行期间， 更新了远程引用但尚未传送对象时被调用。</span><br><span class="line">12. pre-auto-gc 会在垃圾回收开始之前被调用，可以用它来提醒你现在要回收垃圾了，或者依情形判断是否要中断</span><br></pre></td></tr></table></figure>
-<ul>
-<li>服务端 Hooks</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1. pre-receive 处理来自客户端的推送操作时最先被调用。 </span><br><span class="line">2. update 它会为每一个准备更新的分支各运行一次。 </span><br><span class="line">3. post-receive 在整个过程完结以后运行，可以用来更新其他系统服务或者通知用户。</span><br></pre></td></tr></table></figure>
-<ul>
-<li>测试验证</li>
-</ul>
-<table>
+<h2 id="git-hooks-使用说明"><a href="#git-hooks-使用说明" class="headerlink" title="git hooks 使用说明"></a>git hooks 使用说明</h2><h3 id="客户端-hooks"><a href="#客户端-hooks" class="headerlink" title="客户端 hooks"></a>客户端 hooks</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">1. pre-commit 钩子在键入提交信息前运行。</span><br><span class="line">2. prepare-commit-msg 钩子在启动提交信息编辑器之前，默认信息被创建之后运行。</span><br><span class="line">3. post-commit 钩子在整个提交过程完成后运行。</span><br><span class="line">4. applypatch-msg 你可以用该脚本来确保提交信息符合格式，或直接用脚本修正格式错误。</span><br><span class="line">5. pre-applypatch 在 git am 运行期间被调用</span><br><span class="line">6. post-applypatch 运行于提交产生之后，是在 git am 运行期间最后被调用的钩子。</span><br><span class="line">7. pre-rebase 钩子运行于变基之前，以非零值退出可以中止变基的过程。</span><br><span class="line">8. post-rewrite 钩子被那些会替换提交记录的命令调用。</span><br><span class="line">9. post-checkout 在 git checkout 成功运行后调用。</span><br><span class="line">10. post-merge 在 git merge 成功运行后调用。</span><br><span class="line">11. pre-push 在 git push 运行期间， 更新了远程引用但尚未传送对象时被调用。</span><br><span class="line">12. pre-auto-gc 会在垃圾回收开始之前被调用，可以用它来提醒你现在要回收垃圾了，或者依情形判断是否要中断</span><br></pre></td></tr></table></figure>
+<h3 id="服务端-Hooks"><a href="#服务端-Hooks" class="headerlink" title="服务端 Hooks"></a>服务端 Hooks</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1. pre-receive 处理来自客户端的推送操作时最先被调用。 </span><br><span class="line">2. update 它会为每一个准备更新的分支各运行一次。 </span><br><span class="line">3. post-receive 在整个过程完结以后运行，可以用来更新其他系统服务或者通知用户。</span><br></pre></td></tr></table></figure>
+<h3 id="测试验证"><a href="#测试验证" class="headerlink" title="测试验证"></a>测试验证</h3><table>
 <thead>
 <tr>
 <th style="text-align:center">服务器</th>
@@ -458,12 +449,11 @@
 </tbody>
 </table>
 <ol>
-<li><p>初始化中转仓库</p>
+<li>初始化中转仓库</li>
+</ol>
 <blockquote>
 <p>git init 和 git init –bare 的区别<br>初始化出来的仓库是不一样的，前者初始化的是一个普通的仓库，其中 .git 文件夹是隐藏的，并且能看见该仓库下所有的源码。而后者初始化出来的仓库中的文件，就是 .git 中的文件夹，但不能像前者那样直接浏览或修改仓库中的代码。</p>
 </blockquote>
-</li>
-</ol>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">$ mkdir /software/workspace/project</span><br><span class="line">$ <span class="built_in">cd</span> /software/workspace/project</span><br><span class="line">$ git init --bare</span><br><span class="line">**结果:**</span><br><span class="line">-rw-r--r--  1 root root   23 Apr 25 06:10 HEAD</span><br><span class="line">drwxr-xr-x  2 root root    6 Apr 25 06:10 branches</span><br><span class="line">-rw-r--r--  1 root root   66 Apr 25 06:10 config</span><br><span class="line">-rw-r--r--  1 root root   73 Apr 25 06:10 description</span><br><span class="line">drwxr-xr-x  2 root root 4096 Apr 25 10:27 hooks</span><br><span class="line">drwxr-xr-x  2 root root   20 Apr 25 06:10 info</span><br><span class="line">drwxr-xr-x 41 root root 4096 Apr 25 10:26 objects</span><br><span class="line">drwxr-xr-x  4 root root   29 Apr 25 06:10 refs</span><br></pre></td></tr></table></figure>
 <ol>
 <li>初始化数据存储仓库–其实就是做中转仓的检出</li>
@@ -513,6 +503,10 @@
       
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
+            
+              <a href="/blog/MFS_Setup.html" rel="next" title="Mfs Install">
+                <i class="fa fa-chevron-left"></i> Mfs Install
+              </a>
             
           </div>
 
@@ -603,7 +597,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -625,7 +619,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -668,7 +662,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#git-hooks-使用"><span class="nav-number">1.</span> <span class="nav-text">git hooks 使用</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#配置管理示意图"><span class="nav-number">1.1.</span> <span class="nav-text">配置管理示意图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git-hooks-使用说明"><span class="nav-number">1.2.</span> <span class="nav-text">git hooks 使用说明</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#git-hooks-使用"><span class="nav-number">1.</span> <span class="nav-text">git hooks 使用</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#配置管理示意图"><span class="nav-number">1.1.</span> <span class="nav-text">配置管理示意图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git-hooks-使用说明"><span class="nav-number">1.2.</span> <span class="nav-text">git hooks 使用说明</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#客户端-hooks"><span class="nav-number">1.2.1.</span> <span class="nav-text">客户端 hooks</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#服务端-Hooks"><span class="nav-number">1.2.2.</span> <span class="nav-text">服务端 Hooks</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#测试验证"><span class="nav-number">1.2.3.</span> <span class="nav-text">测试验证</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
