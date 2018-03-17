@@ -112,7 +112,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Elasticsearch," />
 
 
 
@@ -123,16 +123,18 @@
 
 
 
-<meta name="description" content="不积跬步，无以至千里；不积小流，无以成江海。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="EdwardLiuBlog">
-<meta property="og:url" content="https://aarongo.github.io/tags/Mongodb/index.html">
+<meta name="description" content="使用 ELK 进行日志分析处理索引的过程中是否遇到索引数据过多;导致数据分析缓慢,以至于分析不准确.以下介绍如何处理日常生成的索引">
+<meta name="keywords" content="Elasticsearch">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Elasticsearch-索引处理">
+<meta property="og:url" content="https://aarongo.github.io/blog/Elasticsearch-索引处理.html">
 <meta property="og:site_name" content="EdwardLiuBlog">
-<meta property="og:description" content="不积跬步，无以至千里；不积小流，无以成江海。">
+<meta property="og:description" content="使用 ELK 进行日志分析处理索引的过程中是否遇到索引数据过多;导致数据分析缓慢,以至于分析不准确.以下介绍如何处理日常生成的索引">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-03-17T00:19:35.797Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="EdwardLiuBlog">
-<meta name="twitter:description" content="不积跬步，无以至千里；不积小流，无以成江海。">
+<meta name="twitter:title" content="Elasticsearch-索引处理">
+<meta name="twitter:description" content="使用 ELK 进行日志分析处理索引的过程中是否遇到索引数据过多;导致数据分析缓慢,以至于分析不准确.以下介绍如何处理日常生成的索引">
 
 
 
@@ -162,13 +164,13 @@
 
 
 
-  <link rel="canonical" href="https://aarongo.github.io/tags/Mongodb/"/>
+  <link rel="canonical" href="https://aarongo.github.io/blog/Elasticsearch-索引处理.html"/>
 
 
 
 
 
-  <title>标签: Mongodb | EdwardLiuBlog</title>
+  <title>Elasticsearch-索引处理 | EdwardLiuBlog</title>
   
 
 
@@ -187,7 +189,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -315,54 +317,308 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block tag">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>Mongodb<small>标签</small>
-        </h1>
-      </div>
+  
 
-      
-        
+  
+  
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://aarongo.github.io/blog/Elasticsearch-索引处理.html">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="EdwardLiu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="EdwardLiuBlog">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/blog/Mongodb日志清理.html" itemprop="url">
-              
-                <span itemprop="name">Mongodb日志清理</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">Elasticsearch-索引处理</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-03-15T16:06:35+08:00"
-              content="2018-03-15" >
-          03-15
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-17T08:14:06+08:00">
+                2018-03-17
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Monitor/" itemprop="url" rel="index">
+                    <span itemprop="name">Monitor</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/blog/Elasticsearch-索引处理.html" class="leancloud_visitors" data-flag-title="Elasticsearch-索引处理">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-    </div>
+      
 
+      
+        <p>使用 ELK 进行日志分析处理索引的过程中是否遇到索引数据过多;导致数据分析缓慢,以至于分析不准确.以下介绍如何处理日常生成的索引</p>
+<a id="more"></a>
+<h1 id="Elasticsearch-indices"><a href="#Elasticsearch-indices" class="headerlink" title="Elasticsearch indices"></a>Elasticsearch indices</h1><h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><blockquote>
+<p>通过 ELK 收集 Nginx/Tomcat日志进行分析产生大量的索引文件,随着时间的增加索引速度随之变慢/监控数据显示变慢 并且增加磁盘使用量</p>
+</blockquote>
+<p>##分析</p>
+<p>通过以上问题分析需要解决以下几点问题:</p>
+<ol>
+<li>减少 Elasticsearch 处理的索引量(提高监控实时准确性)</li>
+<li>减少 Elasticsearch 索引存储量(减少磁盘使用量)</li>
+<li>关闭 Elasticsearch 无用索引数据</li>
+</ol>
+<h2 id="方案"><a href="#方案" class="headerlink" title="方案"></a>方案</h2><p>使用官方推荐工具Curator处理以上问题</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">日志名称</th>
+<th style="text-align:center">保留天数</th>
+<th style="text-align:center">关闭天数</th>
+<th style="text-align:center">定时任务</th>
+<th style="text-align:center">备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">logstash-wapnginx-access-</td>
+<td style="text-align:center">60</td>
+<td style="text-align:center">7天前</td>
+<td style="text-align:center">每隔7天0:00执行</td>
+<td style="text-align:center">7天做周报使用</td>
+</tr>
+<tr>
+<td style="text-align:center">logstash-restapi-access-</td>
+<td style="text-align:center">60</td>
+<td style="text-align:center">7天前</td>
+<td style="text-align:center">每隔7天0:00执行</td>
+<td style="text-align:center">7天做周报使用</td>
+</tr>
+<tr>
+<td style="text-align:center">……</td>
+<td style="text-align:center">……</td>
+<td style="text-align:center">……</td>
+<td style="text-align:center">……</td>
+<td style="text-align:center">……</td>
+<td>…….</td>
+</tr>
+</tbody>
+</table>
+<p><strong>说明:</strong></p>
+<ol>
+<li>索引保存60</li>
+<li>关闭索引为7天(提高 ELK 响应速度)</li>
+<li>运维人员手动打开需要使用的时间长度的索引</li>
+</ol>
+<blockquote>
+<p>Like a museum curator manages the exhibits and collections on display, Elasticsearch Curator helps you curate, or manage your indices.<br>像博物馆馆长一样，管理展览和收藏品，Elasticsearch Curator可以帮助您策划或管理您的索引。</p>
+</blockquote>
+<p><strong>Compatibility Matrix:</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">version</th>
+<th style="text-align:center">ES 1.x</th>
+<th style="text-align:center">AWS ES 1.x</th>
+<th style="text-align:center">ES 2.x</th>
+<th style="text-align:center">AWS ES 2.x</th>
+<th style="text-align:center">ES 5.x</th>
+<th style="text-align:center">AWS ES 5.x </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">3</td>
+<td style="text-align:center">yes</td>
+<td style="text-align:center">yes*</td>
+<td style="text-align:center">yes</td>
+<td style="text-align:center">yes*</td>
+<td style="text-align:center">no</td>
+<td style="text-align:center">no</td>
+</tr>
+<tr>
+<td style="text-align:center">4</td>
+<td style="text-align:center">no</td>
+<td style="text-align:center">no</td>
+<td style="text-align:center">yes</td>
+<td style="text-align:center">no</td>
+<td style="text-align:center">yes</td>
+<td style="text-align:center">no</td>
+</tr>
+<tr>
+<td style="text-align:center">5</td>
+<td style="text-align:center">no</td>
+<td style="text-align:center">no</td>
+<td style="text-align:center">no</td>
+<td style="text-align:center">no</td>
+<td style="text-align:center">yes</td>
+<td style="text-align:center">yes*</td>
+</tr>
+</tbody>
+</table>
+<h2 id="方案实施"><a href="#方案实施" class="headerlink" title="方案实施"></a>方案实施</h2><ul>
+<li><p>Curator安装</p>
+<ul>
+<li><a href="https://www.elastic.co/guide/en/elasticsearch/client/curator/current/installation.html" target="_blank" rel="noopener">安装连接</a></li>
+</ul>
+</li>
+<li><p>本文使用 pip 进行安装</p>
+  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 默认安装curator, version 5.1.2</span></span><br><span class="line">pip install elasticsearch-curator</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ul>
+<li><p>Curator配置</p>
+<p>  <strong>主配置文件:</strong></p>
+<blockquote>
+<p>Curator默认查找配置文件的的地址为：~/.curator/curator.yml 指定自己的文件位置</p>
+</blockquote>
+<p>  <a href="https://www.elastic.co/guide/en/elasticsearch/client/curator/current/configfile.html" target="_blank" rel="noopener">配置详细介绍</a></p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"># cat /software/elasticsearch/curator.yml</span><br><span class="line">client:  </span><br><span class="line">  hosts: # elasticsearch 主机</span><br><span class="line">    - 10.200.200.77</span><br><span class="line">    - 10.200.200.80</span><br><span class="line">  port: 9200 # 端口</span><br><span class="line">  url_prefix:</span><br><span class="line">  use_ssl: False</span><br><span class="line">  certificate:</span><br><span class="line">  client_cert:</span><br><span class="line">  client_key:</span><br><span class="line">  aws_key:</span><br><span class="line">  aws_secret_key:</span><br><span class="line">  aws_region:</span><br><span class="line">  ssl_no_validate: False</span><br><span class="line">  http_auth:</span><br><span class="line">  timeout: 30</span><br><span class="line">  master_only: False</span><br><span class="line">logging:  </span><br><span class="line">  loglevel: INFO</span><br><span class="line">  logfile:</span><br><span class="line">  logformat: default</span><br><span class="line">  blacklist: [&apos;elasticsearch&apos;, &apos;urllib3&apos;]</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><strong>删除索引配置</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># cat /software/elasticsearch/delete_indeces.yml</span></span><br><span class="line">actions:  </span><br><span class="line">  <span class="number">1</span>:</span><br><span class="line">    action: delete_indices</span><br><span class="line">    description: &gt;-</span><br><span class="line">      Delete indices older than <span class="number">60</span> days (based on index name), <span class="keyword">for</span> logstash-wapnginx-access-</span><br><span class="line">      prefixed indices. Ignore the error <span class="keyword">if</span> the filter does <span class="keyword">not</span> result <span class="keyword">in</span> an</span><br><span class="line">      actionable list of indices (ignore_empty_list) <span class="keyword">and</span> exit cleanly.</span><br><span class="line">    options:</span><br><span class="line">      ignore_empty_list: <span class="keyword">True</span></span><br><span class="line">      timeout_override:</span><br><span class="line">      continue_if_exception: <span class="keyword">False</span></span><br><span class="line">      disable_action: false</span><br><span class="line">    filters:</span><br><span class="line">    - filtertype: pattern</span><br><span class="line">      kind: prefix</span><br><span class="line">      value: logstash-wapnginx-access-</span><br><span class="line">      exclude:</span><br><span class="line">    - filtertype: age</span><br><span class="line">      source: name</span><br><span class="line">      direction: older</span><br><span class="line">      timestring: <span class="string">'%Y.%m.%d'</span></span><br><span class="line">      unit: days</span><br><span class="line">      unit_count: <span class="number">60</span></span><br><span class="line">      exclude:</span><br><span class="line">  <span class="number">2</span>:</span><br><span class="line">    action: delete_indices</span><br><span class="line">    description: &gt;-</span><br><span class="line">      Delete indices older than <span class="number">60</span> days (based on index name), <span class="keyword">for</span> logstash-restapi-access-</span><br><span class="line">      prefixed indices. Ignore the error <span class="keyword">if</span> the filter does <span class="keyword">not</span> result <span class="keyword">in</span> an</span><br><span class="line">      actionable list of indices (ignore_empty_list) <span class="keyword">and</span> exit cleanly.</span><br><span class="line">    options:</span><br><span class="line">      ignore_empty_list: <span class="keyword">True</span></span><br><span class="line">      timeout_override:</span><br><span class="line">      continue_if_exception: <span class="keyword">False</span></span><br><span class="line">      disable_action: false</span><br><span class="line">    filters:</span><br><span class="line">    - filtertype: pattern</span><br><span class="line">      kind: prefix</span><br><span class="line">      value: logstash-restapi-access-</span><br><span class="line">      exclude:</span><br><span class="line">    - filtertype: age</span><br><span class="line">      source: name</span><br><span class="line">      direction: older</span><br><span class="line">      timestring: <span class="string">'%Y.%m.%d'</span></span><br><span class="line">      unit: days</span><br><span class="line">      unit_count: <span class="number">60</span></span><br><span class="line">      exclude:</span><br></pre></td></tr></table></figure>
+<p><strong>关闭索引配置文件:</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"># cat /software/elasticsearch/close_indeces.yml</span><br><span class="line">---</span><br><span class="line">actions:</span><br><span class="line">  1:</span><br><span class="line">    action: close</span><br><span class="line">    description: &gt;-</span><br><span class="line">      Close indices older than 7 days (based on index name), for logstash-</span><br><span class="line">      prefixed indices.</span><br><span class="line">    options:</span><br><span class="line">      delete_aliases: False</span><br><span class="line">      disable_action: False</span><br><span class="line">    filters:</span><br><span class="line">    - filtertype: pattern</span><br><span class="line">      kind: prefix</span><br><span class="line">      value: logstash-</span><br><span class="line">    - filtertype: age</span><br><span class="line">      source: name</span><br><span class="line">      direction: older</span><br><span class="line">      timestring: &apos;%Y.%m.%d&apos;</span><br><span class="line">      unit: days</span><br><span class="line">      unit_count: 7</span><br></pre></td></tr></table></figure>
+<p><strong>打开索引配置文件:</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">actions:</span><br><span class="line">  1:</span><br><span class="line">    action: open</span><br><span class="line">    description: &gt;-</span><br><span class="line">      Open indices older than 7 days but younger than 30 days (based on index</span><br><span class="line">      name), for logstash- prefixed indices.</span><br><span class="line">    options:</span><br><span class="line">      disable_action: False</span><br><span class="line">    filters:</span><br><span class="line">    - filtertype: pattern</span><br><span class="line">      kind: prefix</span><br><span class="line">      value: logstash-</span><br><span class="line">      exclude:</span><br><span class="line">    - filtertype: age</span><br><span class="line">      source: name</span><br><span class="line">      direction: older</span><br><span class="line">      timestring: &apos;%Y.%m.%d&apos;</span><br><span class="line">      unit: days</span><br><span class="line">      unit_count: 7</span><br><span class="line">    - filtertype: age</span><br><span class="line">      source: name</span><br><span class="line">      direction: younger</span><br><span class="line">      timestring: &apos;%Y.%m.%d&apos;</span><br><span class="line">      unit: days</span><br><span class="line">      unit_count: 30</span><br></pre></td></tr></table></figure>
+<pre><code>**定时任务:**
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"># cat /software/script/schedule_script.sh</span><br><span class="line"># !/bin/sh</span><br><span class="line"></span><br><span class="line"># 定时删除大于一定时间的日志数据</span><br><span class="line"></span><br><span class="line">date=`date &quot;+%Y-%m-%d %H:%M&quot;`  </span><br><span class="line">echo &quot;============================= begin at: $date  ===============================&quot; &gt;&gt; /software/elasticsearch/logs/delete_indeces.log</span><br><span class="line"></span><br><span class="line">/usr/bin/curator --config /path/to/curator.yml /path/to/delete_indeces.yml &gt;&gt; /software/elasticsearch/logs/delete_indeces.log</span><br><span class="line"></span><br><span class="line">echo &quot;==================================== end =====================================&quot; &gt;&gt; /software/elasticsearch/logs/delete_indeces.log</span><br><span class="line"></span><br><span class="line"># 定时关闭一定时间的索引</span><br><span class="line"></span><br><span class="line">echo &quot;============================= begin at: $date  ===============================&quot; &gt;&gt; /software/elasticsearch/logs/close_indeces.log</span><br><span class="line"></span><br><span class="line">/usr/bin/curator --config /software/elasticsearch/curator.yml /software/elasticsearch/close_indeces.yml &gt;&gt; /software/elasticsearch/logs/close_indeces.log</span><br><span class="line"></span><br><span class="line">echo &quot;==================================== end =====================================&quot; &gt;&gt; /software/elasticsearch/logs/close_indeces.log</span><br><span class="line"></span><br><span class="line"># crontab -l</span><br><span class="line">#For Auto elasticsearch indeces</span><br><span class="line">0 0 */7 * * /software/script/schedule_script.sh</span><br></pre></td></tr></table></figure>
+</code></pre>
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Elasticsearch/" rel="tag"># Elasticsearch</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/blog/Nginx-nginx-limit.html" rel="next" title="Nginx_nginx-limit">
+                <i class="fa fa-chevron-left"></i> Nginx_nginx-limit
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -370,6 +626,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -390,8 +650,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -465,6 +734,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Elasticsearch-indices"><span class="nav-number">1.</span> <span class="nav-text">Elasticsearch indices</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#背景"><span class="nav-number">1.1.</span> <span class="nav-text">背景</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#方案"><span class="nav-number">1.2.</span> <span class="nav-text">方案</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#方案实施"><span class="nav-number">1.3.</span> <span class="nav-text">方案实施</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -598,6 +883,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
